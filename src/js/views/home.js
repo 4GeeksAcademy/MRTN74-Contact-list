@@ -21,6 +21,7 @@ export const Home = () => {
 			{store.contacts.map((item) => 
 				
 					<li
+					key={item.id}
 						className="list-group-item d-flex"
 						>
 						<img src="https://picsum.photos/200" alt=""></img>
@@ -36,7 +37,7 @@ export const Home = () => {
 						</Link>
 						</div>
 						<div className="trashcan px-5">
-							<button onClick= { actions.saveToDelete(item.id) } type="button" className="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+							<button onClick={ () => actions.saveToDelete(item.id) } type="button" className="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
 							<FontAwesomeIcon icon={faTrashCan} />
 							</button>
 

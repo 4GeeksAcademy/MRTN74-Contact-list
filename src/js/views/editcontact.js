@@ -52,9 +52,9 @@ export const EditContact = (item) => {
     				<label>Phone number</label>
    					<input value={contact.phone} onChange={handleChange} name= 'phone' type="number" className="form-control" id="formGroupExampleInput" placeholder="Enter your phone number"></input>
   				</div>
-				
-				<button onClick={() => actions.editarContacto(contact, theid)} type="button" className="btn btn-primary py-3">Save Contact</button>
-				
+				<Link to="/">
+					<button onClick={() => actions.editarContacto(contact, theid)} type="button" className="btn btn-primary py-3">Save Contact</button>
+				</Link>
 			</form>
 			<br />
 			<Link to="/">
